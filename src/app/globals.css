@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ec-color-bg: #ffffff;
+  --ec-color-surface: #f7f7f7;
+  --ec-color-text: #111111;
+  --ec-color-text-muted: #6b6b6b;
+  --ec-color-border: rgba(17, 17, 17, 0.14);
+  --ec-color-overlay: rgba(17, 17, 17, 0.54);
+
+  --ec-radius-2: 8px;
+  --ec-radius-3: 12px;
+  --ec-radius-4: 16px;
+  --ec-radius-full: 9999px;
+
+  --ec-space-1: 4px;
+  --ec-space-2: 8px;
+  --ec-space-3: 12px;
+  --ec-space-4: 16px;
+  --ec-space-5: 20px;
+  --ec-space-6: 24px;
+  --ec-space-8: 32px;
+  --ec-space-10: 40px;
+  --ec-space-12: 48px;
+  --ec-space-16: 64px;
+  --ec-space-20: 80px;
+
+  --ec-text-hero: 64px;
+  --ec-text-h1: 48px;
+  --ec-text-h2: 36px;
+  --ec-text-h3: 28px;
+  --ec-text-body-lg: 18px;
+  --ec-text-body: 16px;
+  --ec-text-caption: 14px;
+
+  --ec-leading-tight: 1.1;
+  --ec-leading-snug: 1.25;
+  --ec-leading-normal: 1.5;
+
+  --ec-tracking-tight: -0.02em;
+  --ec-tracking-normal: 0em;
+
+  --ec-container-edge: 20px;
+  --ec-container-max: 1880px;
+  --ec-header-max: 1920px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-background: var(--ec-color-bg);
+  --color-foreground: var(--ec-color-text);
+  --color-ec-bg: var(--ec-color-bg);
+  --color-ec-surface: var(--ec-color-surface);
+  --color-ec-text: var(--ec-color-text);
+  --color-ec-text-muted: var(--ec-color-text-muted);
+  --color-ec-border: var(--ec-color-border);
+  --color-ec-overlay: var(--ec-color-overlay);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --radius-ec-2: var(--ec-radius-2);
+  --radius-ec-3: var(--ec-radius-3);
+  --radius-ec-4: var(--ec-radius-4);
+  --radius-ec-full: var(--ec-radius-full);
+
+  --spacing-ec-1: var(--ec-space-1);
+  --spacing-ec-2: var(--ec-space-2);
+  --spacing-ec-3: var(--ec-space-3);
+  --spacing-ec-4: var(--ec-space-4);
+  --spacing-ec-5: var(--ec-space-5);
+  --spacing-ec-6: var(--ec-space-6);
+  --spacing-ec-8: var(--ec-space-8);
+  --spacing-ec-10: var(--ec-space-10);
+  --spacing-ec-12: var(--ec-space-12);
+  --spacing-ec-16: var(--ec-space-16);
+  --spacing-ec-20: var(--ec-space-20);
+
+  --text-ec-hero: var(--ec-text-hero);
+  --text-ec-h1: var(--ec-text-h1);
+  --text-ec-h2: var(--ec-text-h2);
+  --text-ec-h3: var(--ec-text-h3);
+  --text-ec-body-lg: var(--ec-text-body-lg);
+  --text-ec-body: var(--ec-text-body);
+  --text-ec-caption: var(--ec-text-caption);
+
+  --leading-ec-tight: var(--ec-leading-tight);
+  --leading-ec-snug: var(--ec-leading-snug);
+  --leading-ec-normal: var(--ec-leading-normal);
+
+  --tracking-ec-tight: var(--ec-tracking-tight);
+  --tracking-ec-normal: var(--ec-tracking-normal);
+
+  --font-sans: var(--font-manrope);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ec-color-bg);
+  color: var(--ec-color-text);
+  font-family: var(--font-manrope), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
