@@ -21,12 +21,17 @@ export function CollectionSplit() {
               className="relative overflow-hidden rounded-[var(--ec-radius-4)]"
             >
               <div className="relative aspect-[5/4] w-full md:aspect-[16/10]">
-                <div className="absolute inset-0 bg-[var(--ec-color-surface)]" />
-                <div className="absolute inset-0 bg-[var(--ec-color-overlay)] opacity-40" />
+                <div aria-hidden="true" className="absolute inset-0">
+                  <div className="absolute inset-0 bg-[var(--ec-color-surface)]" />
+                </div>
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 bg-[var(--ec-color-overlay)] opacity-40"
+                />
 
                 <div className="relative z-10 flex h-full flex-col justify-end p-[var(--ec-space-8)] md:p-[var(--ec-space-10)]">
-                  <div className="flex flex-wrap items-center gap-[var(--ec-space-5)]">
-                    <h2 className="text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-bg)] md:text-[length:var(--ec-text-h2)]">
+                  <div className="flex flex-wrap items-center justify-between gap-[var(--ec-space-5)]">
+                    <h2 className="text-[length:var(--ec-text-h2)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-bg)]">
                       {card.title}
                     </h2>
                     <Link
