@@ -7,7 +7,14 @@ export function Hero() {
         <div className="relative overflow-hidden rounded-[var(--ec-radius-4)]">
           <div className="relative aspect-[16/10] w-full md:aspect-[1880/720]">
             <div aria-hidden="true" className="absolute inset-0">
-              <div className="absolute inset-0 bg-[var(--ec-color-surface)]" />
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/videos/hero.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
             </div>
             <div
               aria-hidden="true"
