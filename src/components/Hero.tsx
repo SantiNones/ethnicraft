@@ -4,8 +4,8 @@ export function Hero() {
   return (
     <section className="w-full bg-[var(--ec-color-surface)]">
       <div className="mx-auto w-full max-w-[var(--ec-container-max)] px-[var(--ec-container-edge)] py-[var(--ec-space-16)] md:py-[var(--ec-space-20)]">
-        <div className="rounded-[var(--ec-radius-4)] bg-[var(--ec-color-bg)] p-[var(--ec-space-10)] md:p-[var(--ec-space-16)]">
-          <div className="grid gap-[var(--ec-space-12)] md:grid-cols-[1fr_1.15fr] md:items-center md:gap-[var(--ec-space-16)]">
+        <div className="rounded-[var(--ec-radius-4)] border border-[color:var(--ec-color-border)] bg-[var(--ec-color-bg)] p-[var(--ec-space-10)] md:p-[var(--ec-space-20)]">
+          <div className="grid gap-[var(--ec-space-12)] md:grid-cols-[1fr_1.2fr] md:items-center md:gap-[var(--ec-space-16)]">
             <div>
               <p className="text-[length:var(--ec-text-caption)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text-muted)]">
                 Solid wood furniture

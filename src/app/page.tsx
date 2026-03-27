@@ -1,3 +1,4 @@
+import { CollectionSplit } from "../components/CollectionSplit";
 import { Hero } from "../components/Hero";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -7,6 +8,7 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
+        <CollectionSplit />
       </main>
     </div>
   );

@@ -4,38 +4,84 @@ export function SiteHeader() {
   return (
     <header className="w-full bg-[var(--ec-color-bg)]">
       <div className="mx-auto w-full max-w-[var(--ec-header-max)] px-[var(--ec-container-edge)]">
-        <div className="flex h-[var(--ec-space-20)] items-center justify-between">
+        <div className="relative flex h-[var(--ec-space-20)] items-center justify-between">
           <Link
             href="/"
-            className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+            aria-label="Ethnicraft"
+            className="text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-text)]"
           >
-            ETHNICRAFT
+            Ethnicraft
           </Link>
 
-          <nav aria-label="Primary" className="hidden md:block">
+          <nav
+            aria-label="Primary"
+            className="absolute left-1/2 hidden -translate-x-1/2 md:flex"
+          >
             <ul className="flex items-center gap-[var(--ec-space-10)]">
               <li>
                 <Link
-                  href="#collections"
+                  href="#furniture"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
                 >
-                  Collections
+                  All Furniture
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#categories"
+                  href="#indoor"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
                 >
-                  Categories
+                  Indoor
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#about"
+                  href="#outdoor"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
                 >
-                  About
+                  Outdoor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#collaborations"
+                  className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+                >
+                  Collaborations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#inspiration"
+                  className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+                >
+                  Inspiration
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#search"
+                  aria-label="Search"
+                  className="inline-flex h-[var(--ec-space-12)] w-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)]"
+                >
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-[var(--ec-space-6)] w-[var(--ec-space-6)]"
+                  >
+                    <path
+                      d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    />
+                    <path
+                      d="M16.2 16.2 21 21"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
                 </Link>
               </li>
             </ul>
@@ -43,14 +89,38 @@ export function SiteHeader() {
 
           <div className="flex items-center gap-[var(--ec-space-4)]">
             <Link
-              href="#search"
-              className="hidden sm:inline-flex h-[var(--ec-space-12)] items-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+              href="#cart"
+              className="hidden md:inline-flex h-[var(--ec-space-12)] items-center gap-[var(--ec-space-2)] rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] bg-[var(--ec-color-bg)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+              aria-label="Cart"
             >
-              Search
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-[var(--ec-space-6)] w-[var(--ec-space-6)]"
+              >
+                <path
+                  d="M7 8a5 5 0 0 1 10 0v2h2v11H5V10h2V8Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M9 10V8a3 3 0 0 1 6 0v2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <span
+                aria-hidden="true"
+                className="h-[var(--ec-space-4)] w-px bg-[var(--ec-color-border)]"
+              />
+              <span>2</span>
             </Link>
             <Link
               href="#menu"
-              className="inline-flex h-[var(--ec-space-12)] items-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+              className="inline-flex h-[var(--ec-space-12)] items-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)] md:hidden"
             >
               Menu
             </Link>
