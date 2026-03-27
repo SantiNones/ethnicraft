@@ -1,5 +1,6 @@
 import { CollectionSplit } from "../components/CollectionSplit";
 import { Hero } from "../components/Hero";
+import { PopularCategories } from "../components/PopularCategories";
 import { SiteHeader } from "../components/SiteHeader";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <CollectionSplit />
+        <PopularCategories />
       </main>
     </div>
   );
