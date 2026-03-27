@@ -3,11 +3,20 @@ import Link from "next/link";
 type CollectionSplitCard = {
   title: string;
   href: string;
+  imageSrc: string;
 };
 
 const CARDS: CollectionSplitCard[] = [
-  { title: "Indoor Collection", href: "#indoor" },
-  { title: "Outdoor Collection", href: "#outdoor" },
+  {
+    title: "Indoor Collection",
+    href: "#indoor",
+    imageSrc: "/images/collection-indoor.jpg",
+  },
+  {
+    title: "Outdoor Collection",
+    href: "#outdoor",
+    imageSrc: "/images/collection-outdoor.jpg",
+  },
 ];
 
 export function CollectionSplit() {
@@ -22,7 +31,11 @@ export function CollectionSplit() {
             >
               <div className="relative aspect-[5/4] w-full md:aspect-[16/10]">
                 <div aria-hidden="true" className="absolute inset-0">
-                  <div className="absolute inset-0 bg-[var(--ec-color-surface)]" />
+                  <img
+                    alt=""
+                    src={card.imageSrc}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
                 </div>
                 <div
                   aria-hidden="true"
