@@ -6,8 +6,8 @@ type CollectionSplitCard = {
 };
 
 const CARDS: CollectionSplitCard[] = [
-  { title: "Living", href: "#collections" },
-  { title: "Dining", href: "#collections" },
+  { title: "Indoor Collection", href: "#indoor" },
+  { title: "Outdoor Collection", href: "#outdoor" },
 ];
 
 export function CollectionSplit() {
@@ -18,22 +18,22 @@ export function CollectionSplit() {
           {CARDS.map((card) => (
             <article
               key={card.title}
-              className="relative overflow-hidden rounded-[var(--ec-radius-4)] border border-[color:var(--ec-color-border)]"
+              className="relative overflow-hidden rounded-[var(--ec-radius-4)]"
             >
               <div className="relative aspect-[5/4] w-full md:aspect-[16/10]">
                 <div className="absolute inset-0 bg-[var(--ec-color-surface)]" />
-                <div className="absolute inset-0 bg-[var(--ec-color-overlay)] opacity-0" />
+                <div className="absolute inset-0 bg-[var(--ec-color-overlay)] opacity-40" />
 
                 <div className="relative z-10 flex h-full flex-col justify-end p-[var(--ec-space-8)] md:p-[var(--ec-space-10)]">
-                  <h2 className="text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-text)] md:text-[length:var(--ec-text-h2)]">
-                    {card.title}
-                  </h2>
-                  <div className="mt-[var(--ec-space-6)]">
+                  <div className="flex flex-wrap items-center gap-[var(--ec-space-5)]">
+                    <h2 className="text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-bg)] md:text-[length:var(--ec-text-h2)]">
+                      {card.title}
+                    </h2>
                     <Link
                       href={card.href}
-                      className="inline-flex h-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)] bg-[var(--ec-color-text)] px-[var(--ec-space-6)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-bg)]"
+                      className="inline-flex h-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)] border-2 border-[color:var(--ec-color-bg)] px-[var(--ec-space-6)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-bg)]"
                     >
-                      Shop collection
+                      Explore
                     </Link>
                   </div>
                 </div>
