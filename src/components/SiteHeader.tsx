@@ -15,9 +15,9 @@ export function SiteHeader() {
 
           <nav
             aria-label="Primary"
-            className="absolute left-1/2 hidden -translate-x-1/2 md:flex"
+            className="hidden md:flex flex-1 justify-center min-w-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:flex-none"
           >
-            <ul className="flex items-center gap-[var(--ec-space-10)]">
+            <ul className="flex items-center gap-[var(--ec-space-6)] lg:gap-[var(--ec-space-10)] whitespace-nowrap">
               <li>
                 <Link
                   href="#furniture"
@@ -42,7 +42,7 @@ export function SiteHeader() {
                   Outdoor
                 </Link>
               </li>
-              <li>
+              <li className="hidden lg:block">
                 <Link
                   href="#collaborations"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
@@ -50,7 +50,7 @@ export function SiteHeader() {
                   Collaborations
                 </Link>
               </li>
-              <li>
+              <li className="hidden lg:block">
                 <Link
                   href="#inspiration"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
@@ -88,6 +88,31 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-[var(--ec-space-4)]">
+            <Link
+              href="#cart"
+              aria-label="Cart"
+              className="inline-flex md:hidden h-[var(--ec-space-12)] w-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)]"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-[var(--ec-space-6)] w-[var(--ec-space-6)]"
+              >
+                <path
+                  d="M7 8a5 5 0 0 1 10 0v2h2v11H5V10h2V8Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M9 10V8a3 3 0 0 1 6 0v2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </Link>
             <Link
               href="#cart"
               className="hidden md:inline-flex h-[var(--ec-space-12)] items-center gap-[var(--ec-space-2)] rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] bg-[var(--ec-color-bg)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"

@@ -45,7 +45,7 @@ export function PopularCategories() {
                 <img
                   alt=""
                   src={category.imageSrc}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover md:will-change-transform md:transition-transform md:duration-500 md:ease-out md:group-hover:scale-105"
                 />
               </div>
               <div className="mt-[var(--ec-space-6)] text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-text)]">
