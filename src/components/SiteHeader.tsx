@@ -13,16 +13,16 @@ export function SiteHeader() {
             <img
               src="/images/ethnicraft-logo.jpg"
               alt="Ethnicraft"
-              className="block h-[var(--ec-space-6)] w-auto md:h-[var(--ec-space-8)]"
+              className="block h-[var(--ec-space-6)] w-auto md:h-[var(--ec-space-6)] xl:h-[var(--ec-space-8)]"
             />
           </Link>
 
           <nav
             aria-label="Primary"
-            className="hidden md:flex flex-1 justify-center min-w-0 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:flex-none"
+            className="hidden md:flex flex-1 justify-center min-w-0 xl:absolute xl:left-1/2 xl:-translate-x-1/2 xl:flex-none"
           >
-            <ul className="flex items-center gap-[var(--ec-space-6)] lg:gap-[var(--ec-space-10)] whitespace-nowrap">
-              <li>
+            <ul className="flex items-center gap-[var(--ec-space-4)] xl:gap-[var(--ec-space-10)] whitespace-nowrap">
+              <li className="hidden xl:block">
                 <Link
                   href="#furniture"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
@@ -46,7 +46,7 @@ export function SiteHeader() {
                   Outdoor
                 </Link>
               </li>
-              <li className="hidden lg:block">
+              <li className="hidden xl:block">
                 <Link
                   href="#collaborations"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
@@ -54,7 +54,7 @@ export function SiteHeader() {
                   Collaborations
                 </Link>
               </li>
-              <li className="hidden lg:block">
+              <li className="hidden xl:block">
                 <Link
                   href="#inspiration"
                   className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
@@ -95,7 +95,7 @@ export function SiteHeader() {
             <Link
               href="#cart"
               aria-label="Cart"
-              className="inline-flex md:hidden h-[var(--ec-space-12)] w-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)]"
+              className="inline-flex h-[var(--ec-space-12)] w-[var(--ec-space-12)] items-center justify-center rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] xl:hidden"
             >
               <svg
                 aria-hidden="true"
@@ -119,7 +119,7 @@ export function SiteHeader() {
             </Link>
             <Link
               href="#cart"
-              className="hidden md:inline-flex h-[var(--ec-space-12)] items-center gap-[var(--ec-space-2)] rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] bg-[var(--ec-color-bg)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
+              className="hidden xl:inline-flex h-[var(--ec-space-12)] items-center gap-[var(--ec-space-2)] rounded-[var(--ec-radius-full)] border border-[color:var(--ec-color-border)] bg-[var(--ec-color-bg)] px-[var(--ec-space-5)] text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text)]"
               aria-label="Cart"
             >
               <svg
