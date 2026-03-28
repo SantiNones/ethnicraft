@@ -29,8 +29,8 @@ const CATEGORIES: PopularCategory[] = [
 
 export function PopularCategories() {
   return (
-    <section id="categories" className="w-full bg-[var(--ec-color-surface)]">
-      <div className="mx-auto w-full max-w-[var(--ec-container-max)] px-[var(--ec-container-edge)] py-[var(--ec-space-16)] md:py-[var(--ec-space-20)]">
+    <section id="categories" className="w-full bg-[var(--ec-color-bg)]">
+      <div className="w-full px-[var(--ec-container-edge)] pt-[var(--ec-space-12)] pb-[var(--ec-space-16)] md:px-[var(--ec-space-4)] md:pt-[var(--ec-space-16)] md:pb-[var(--ec-space-20)]">
         <div>
           <h2 className="text-[length:var(--ec-text-body)] leading-[var(--ec-leading-normal)] tracking-[var(--ec-tracking-normal)] text-[var(--ec-color-text-muted)]">
             Popular Categories

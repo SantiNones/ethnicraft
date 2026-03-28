@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="w-full bg-[var(--ec-color-bg)]">
-      <div className="mx-auto w-full max-w-[var(--ec-container-max)] px-[var(--ec-container-edge)] py-[var(--ec-space-16)] md:py-[var(--ec-space-20)]">
+      <div className="w-full px-[var(--ec-container-edge)] pt-[var(--ec-space-10)] pb-[var(--ec-space-6)] md:px-[var(--ec-space-4)] md:pt-[var(--ec-space-12)] md:pb-0">
         <div className="relative overflow-hidden rounded-[var(--ec-radius-4)]">
           <div className="relative aspect-[16/10] w-full md:aspect-[1880/720]">
             <div aria-hidden="true" className="absolute inset-0">
@@ -22,7 +22,7 @@ export function Hero() {
             />
 
             <div className="relative z-10 flex h-full items-center justify-center p-[var(--ec-space-10)] md:p-[var(--ec-space-16)]">
-              <div className="flex w-full max-w-[var(--ec-container-max)] flex-col items-center gap-[var(--ec-space-10)] text-center">
+              <div className="flex w-full flex-col items-center gap-[var(--ec-space-10)] text-center">
                 <h1 className="text-[length:var(--ec-text-h2)] leading-[var(--ec-leading-tight)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-bg)] md:text-[length:var(--ec-text-hero)]">
                   Foundations for the stories of your life.
                 </h1>

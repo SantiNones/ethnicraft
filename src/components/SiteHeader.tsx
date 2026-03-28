@@ -8,9 +8,13 @@ export function SiteHeader() {
           <Link
             href="/"
             aria-label="Ethnicraft"
-            className="text-[length:var(--ec-text-h3)] leading-[var(--ec-leading-snug)] tracking-[var(--ec-tracking-tight)] text-[var(--ec-color-text)]"
+            className="block shrink-0"
           >
-            Ethnicraft
+            <img
+              src="/images/ethnicraft-logo.jpg"
+              alt="Ethnicraft"
+              className="block h-[var(--ec-space-6)] w-auto md:h-[var(--ec-space-8)]"
+            />
           </Link>
 
           <nav
