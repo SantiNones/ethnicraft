@@ -1,31 +1,47 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [showPlay, setShowPlay] = useState(false);
 
   useEffect(() => {
     const el = videoRef.current;
     if (!el) return;
 
     el.muted = true;
+    el.defaultMuted = true;
     el.playsInline = true;
 
-    const play = async () => {
+    const play = async (): Promise<boolean> => {
       try {
         await el.play();
+        setShowPlay(false);
+        return true;
       } catch {
-        // Autoplay may be blocked by the browser; keep video as background.
+        setShowPlay(true);
+        return false;
       }
     };
 
     void play();
     el.addEventListener("loadedmetadata", play);
+    el.addEventListener("canplay", play);
+
+    const onFirstInteraction = () => {
+      void play();
+    };
+
+    window.addEventListener("touchstart", onFirstInteraction, { once: true });
+    window.addEventListener("pointerdown", onFirstInteraction, { once: true });
 
     return () => {
       el.removeEventListener("loadedmetadata", play);
+      el.removeEventListener("canplay", play);
+      window.removeEventListener("touchstart", onFirstInteraction);
+      window.removeEventListener("pointerdown", onFirstInteraction);
     };
   }, []);
 
@@ -41,12 +57,41 @@ export function Hero() {
                 src="/videos/hero.mp4"
                 autoPlay
                 muted
+                defaultMuted
                 loop
                 playsInline
-                preload="metadata"
+                preload="auto"
                 controls={false}
+                disablePictureInPicture
               />
             </div>
+
+            {showPlay ? (
+              <button
+                type="button"
+                aria-label="Play background video"
+                className="absolute inset-0 z-20 flex items-center justify-center"
+                onClick={async () => {
+                  const el = videoRef.current;
+                  if (!el) return;
+
+                  el.muted = true;
+                  el.defaultMuted = true;
+                  el.playsInline = true;
+
+                  try {
+                    await el.play();
+                    setShowPlay(false);
+                  } catch {
+                    setShowPlay(true);
+                  }
+                }}
+              >
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-black/35 text-[var(--ec-color-bg)] backdrop-blur-sm">
+                  <span className="ml-0.5 inline-block h-0 w-0 border-y-[10px] border-y-transparent border-l-[16px] border-l-[var(--ec-color-bg)]" />
+                </span>
+              </button>
+            ) : null}
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-[var(--ec-color-overlay)] opacity-60"
