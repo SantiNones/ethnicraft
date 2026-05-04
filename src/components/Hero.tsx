@@ -57,7 +57,6 @@ export function Hero() {
                 src="/videos/hero.mp4"
                 autoPlay
                 muted
-                defaultMuted
                 loop
                 playsInline
                 preload="auto"

@@ -6,7 +6,7 @@ export function SiteHeader() {
       <div className="mx-auto w-full max-w-[var(--ec-header-max)] px-[var(--ec-container-edge)]">
         <div className="relative flex h-[var(--ec-space-20)] items-center justify-between">
           <Link
-            href="/"
+            href="/ethnicraft"
             aria-label="Ethnicraft"
             className="block shrink-0"
           >
