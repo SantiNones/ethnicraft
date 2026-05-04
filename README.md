@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ethnicraft
 
-## Getting Started
+Marketing website for a premium furniture brand, built from Figma with a token-driven component architecture.
 
-First, run the development server:
+## Project goal
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Build a clean, responsive, accessible, and visually consistent website that matches the Figma design while keeping the code maintainable and easy to iterate on.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- CSS variables / design tokens
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Current status
 
-## Learn More
+Implemented so far:
 
-To learn more about Next.js, take a look at the following resources:
+- Project initialized with Next.js + TypeScript + Tailwind
+- Token system wired into the app
+- Global typography and base styles configured
+- Homepage scaffold started
+- `SiteHeader` component created
+- `Hero` component created
+- `page.tsx` updated to compose the homepage from sections
+- GitHub repository connected
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture approach
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project follows a Figma-first workflow:
 
-## Deploy on Vercel
+1. Extract design structure from Figma
+2. Convert design decisions into tokens
+3. Build the UI section by section
+4. Validate each section against the design
+5. Keep the code modular and reusable
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Folder structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```txt
+src/
+  app/
+    layout.tsx
+    page.tsx
+    globals.css
+  components/
+    SiteHeader.tsx
+    Hero.tsx

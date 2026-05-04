@@ -1,6 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+
+    el.muted = true;
+    el.playsInline = true;
+
+    const play = async () => {
+      try {
+        await el.play();
+      } catch {
+        // Autoplay may be blocked by the browser; keep video as background.
+      }
+    };
+
+    void play();
+    el.addEventListener("loadedmetadata", play);
+
+    return () => {
+      el.removeEventListener("loadedmetadata", play);
+    };
+  }, []);
+
   return (
     <section className="w-full bg-[var(--ec-color-bg)]">
       <div className="w-full px-[var(--ec-container-edge)] pt-[var(--ec-space-10)] pb-[var(--ec-space-6)] md:px-[var(--ec-space-4)] md:pt-[var(--ec-space-12)] md:pb-0">
@@ -8,12 +36,15 @@ export function Hero() {
           <div className="relative aspect-[5/4] w-full md:aspect-[1880/720]">
             <div aria-hidden="true" className="absolute inset-0">
               <video
+                ref={videoRef}
                 className="absolute inset-0 h-full w-full object-cover"
                 src="/videos/hero.mp4"
                 autoPlay
                 muted
                 loop
                 playsInline
+                preload="metadata"
+                controls={false}
               />
             </div>
             <div
