@@ -88,23 +88,6 @@
 
  ![Lighthouse](assets/screenshots/06-lighthouse.png)
 
- ### Recommended screenshot sizes (portfolio-friendly)
-
- - **Desktop full page**: 1440×900 (or 1440×1024)
- - **Mobile**: 390×844 (iPhone 14/15 size) or 375×812
- - **UI details**: crop to focus on typography/spacing (avoid tiny text)
- - Prefer **PNG** for crisp UI.
-
- ### How to capture strong portfolio screenshots
-
- - Use production-like content (no lorem ipsum if possible).
- - Capture:
-   - hero + header
-   - one “story” section
-   - a close-up crop showing typography and spacing quality
- - Keep the browser chrome minimal (or consistent across shots).
- - Use the same viewport sizes across iterations.
-
  ## Getting Started
 
  ### Installation
